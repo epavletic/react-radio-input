@@ -35,7 +35,11 @@ const ExampleComponent = () => {
   const [selectedFruit, setSelectedFruit] = useState(initialValue);
 
   return (
-    <RadioGroup name="favoriteFruit" onChange={setSelectedFruit} selectedValue={selectedFruit}>
+    <RadioGroup
+      name="favoriteFruit"
+      onChange={setSelectedFruit}
+      selectedValue={selectedFruit}
+    >
       <label htmlFor="bananaOption">
         <Radio id="bananaOption" value="banana" />
         Bananas
@@ -53,7 +57,7 @@ const ExampleComponent = () => {
 };
 ```
 
-[![Open example in CodeSandbox](https://img.shields.io/badge/Open%20in%20CodeSandbox-000000.svg?style=for-the-badge&logo=codesandbox&labelColor=000000&logoWidth=20)](…)
+[![Open example in CodeSandbox](https://img.shields.io/badge/Open%20in%20CodeSandbox-000000.svg?style=for-the-badge&logo=codesandbox&labelColor=000000&logoWidth=20)](https://codesandbox.io/s/brave-morse-154b6)
 
 ### A few points worth mentioning:
 
@@ -75,16 +79,18 @@ import { styled } from '@emotion/styled';
 import { Radio, useRadioGroup } from 'react-radio-input';
 
 const RadioWrapper = styled.label(({ isSelected }) => `
-  background-color: ${isSelected ? 'blue' : 'red'};
+  background-color: ${isSelected ? '#5a5ae8' : '#dddde1'};
 `);
 
-const CustomRadio = ({ value }) => {
+const CustomRadio = ({ description, label, value }) => {
   const { selectedValue } = useRadioGroup();
   const isSelected = value === selectedValue;
 
   return (
     <RadioWrapper isSelected={isSelected}>
       <Radio value={value} />
+      {label}
+      {description}
     <RadioWrapper />
   );
 };
@@ -97,19 +103,27 @@ import { RadioGroup } from 'react-radio-input';
 import CustomRadio from './CustomRadio';
 
 const ExampleComponent = () => {
-  const initialValue = 'apple';
-  const [selectedFruit, setSelectedFruit] = useState(initialValue);
+  const [selectedTier, setSelectedTier] = useState();
 
   return (
-    <RadioGroup name="favoriteFruit" onChange={setSelectedFruit} selectedValue={selectedFruit}>
-      <legend>Proper label for your radio-group</legend>
-      <CustomRadio value="banana" />
-      <CustomRadio value="apple" />
+    <RadioGroup name="productTier" onChange={setSelectedTier} selectedValue={selectedTier}>
+      <legend>Select the size of your side project</legend>
+      <CustomRadio label="Hobby" description="1GB – $5/month" value="hobby" />
+      <CustomRadio
+        label="Freelancer"
+        description="5GB – $10/month"
+        value="freelancer"
+      />
+      <CustomRadio
+        label="Startup"
+        description="10GB – $15/month"
+        value="startup"
+      />
     </RadioGroup>
   );
 };
 ```
-[![Open example in CodeSandbox](https://img.shields.io/badge/Open%20in%20CodeSandbox-000000.svg?style=for-the-badge&logo=codesandbox&labelColor=000000&logoWidth=20)](…)
+[![Open example in CodeSandbox](https://img.shields.io/badge/Open%20in%20CodeSandbox-000000.svg?style=for-the-badge&logo=codesandbox&labelColor=000000&logoWidth=20)](https://codesandbox.io/s/determined-christian-99coq)
 
 
 ## API
