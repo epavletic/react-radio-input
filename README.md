@@ -136,7 +136,7 @@ const ExampleComponent = () => {
 | `disabled`      | `Boolean`                                  | Disables all `Radio`’s inside the `RadioGroup`.                                                |
 | `name`          | `String`                                   | Unique name for the current `RadioGroup` – will be implicitly set on each `Radio`.             |
 | `onChange`      | `Function`                                 | Will be called with the selected value as argument whenever a radio is selected.               |
-| `selectedValue` | `String` \| `Number` \| `Boolean`          | The curretly selected value.                                                                   |
+| `selectedValue` | `String` \| `Number` \| `Boolean`          | The currently selected value.                                                                   |
 
 Apart from the above, any additional props to `RadioGroup` will be passed down to `component`.
 
