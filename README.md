@@ -7,7 +7,7 @@
   <br/>
   <br/>
 
-[![npm](https://img.shields.io/npm/v/@eap/eslint-config-eap?style=for-the-badge)](https://www.npmjs.com/package/playroom)
+[![npm](https://img.shields.io/npm/v/react-radio-input?style=for-the-badge)](https://www.npmjs.com/package/react-radio-input)
 
   <hr />
 </div>
