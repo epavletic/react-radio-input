@@ -35,6 +35,13 @@
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epavletic/react-radio-input.git"
+  },
+  "bugs": {
+    "url": "https://github.com/epavletic/react-radio-input/issues"
+  },
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
