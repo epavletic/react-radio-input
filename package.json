@@ -1,6 +1,6 @@
 {
   "name": "react-radio-input",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Erik Pavletic",
   "description": "Radio buttons the proper (React) way.",
   "main": "build/index.js",
