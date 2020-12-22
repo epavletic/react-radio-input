@@ -1,5 +1,5 @@
 <div align="center" >
-  <img src="logo.png" alt="React-radio-group" title="React-radio-group" width="310px" />
+  <img src="https://github.com/epavletic/react-radio-input/raw/main/logo.png" alt="React-radio-group" title="React-radio-group" width="310px" />
   <br/>
   <br/>
 
